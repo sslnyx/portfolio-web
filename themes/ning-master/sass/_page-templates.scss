@@ -1,0 +1,24 @@
+/*--------------------------------------------------------------
+# Page Templates
+--------------------------------------------------------------*/
+
+/* Front page */
+// .post-containor{
+//   box-shadow: -13px 18px 40px -10px rgba(0, 0, 0, .35)
+// }
+
+.site-branding{
+  height: 100vh;
+}
+
+.thumbnail-wrapper{
+  width: 300px;
+  height: 300px;
+  -webkit-box-shadow: -5px 11px 40px -9px rgba(0,0,0,0.65);
+  -moz-box-shadow: -5px 11px 40px -9px rgba(0,0,0,0.65);
+  box-shadow: -5px 11px 40px -9px rgba(0,0,0,0.65);
+  img{
+    object-fit: cover;
+    height: 100%;
+  }
+}

@@ -8,15 +8,14 @@
 
 # Ignore everything in "plugins" except certain plugins. #
 plugins/*
-!plugins/inhabitent-functionality/
-!plugins/business-hours-widget/
+!plugins/ning-master-functionality/
 
 # Ignore everything in "themes" except the active theme. #
 themes/*
-!themes/inhabitent/
+!themes/ning-master/
 
 # Ignore packages #
-themes/inhabitent/node_modules/
+themes/ning-master/node_modules/
 
 # Ignore OS files #
 .DS_Store
