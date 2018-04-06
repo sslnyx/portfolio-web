@@ -20,9 +20,9 @@ get_header(); ?>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-<div class="post-containor" data-aos="fade-up">
+
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+			<div class="post-containor" data-aos="fade-up">
 		<?php if ( has_post_thumbnail() ) : ?>
 		<div class="thumbnail-wrapper">
 			<?php the_post_thumbnail( 'large' ); ?>
@@ -36,14 +36,16 @@ get_header(); ?>
 			<?php ning_master_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
-	</header><!-- .entry-header -->
+
 
 	<div class="entry-content">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
-</article><!-- #post-## -->
 </div>
-			<?php endwhile; ?>
+	
+</article><!-- #post-## -->
+
+<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
 
