@@ -84,10 +84,11 @@ add_filter( 'stylesheet_uri', 'ning_master_minified_css', 10, 2 );
  */
 function ning_master_scripts() {
 	wp_enqueue_style( 'ning-master-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'aos-css', get_template_directory_uri() . '/node_modules/aos/dist/aos.css"' );	
+	wp_enqueue_style( 'aos-css', get_template_directory_uri() . '/node_modules/aos/dist/aos.css' );	
 	wp_enqueue_script( 'ning-master-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 	wp_enqueue_script( 'aos', get_template_directory_uri() . '/node_modules/aos/dist/aos.js', array('jquery'), false, true );
 	wp_enqueue_script( 'aos-init', get_template_directory_uri() . '/build/js/aos-init.min.js', array('jquery'), false, true );
+	wp_enqueue_script( 'hamburger-menu', get_template_directory_uri() . '/build/js/hamburger-menu.min.js', array('jquery'), false, true );
 	
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

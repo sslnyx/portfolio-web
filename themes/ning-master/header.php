@@ -24,9 +24,17 @@
 				<div class="site-branding">
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				
-					<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
+					<div class="hamburger hamburger--elastic" tabindex="0"
+     aria-label="Menu" role="button" aria-controls="navigation">
+  <div class="hamburger-box">
+    <div class="hamburger-inner"></div>
+  </div>
+</div>
+<nav id="site-navigation" class="main-navigation" role="navigation">
+	<!--navigation goes here-->
+	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+</nav>
+
 				</div><!-- .site-branding -->
 
 
