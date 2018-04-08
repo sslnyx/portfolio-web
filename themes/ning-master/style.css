@@ -493,6 +493,42 @@ a {
   text-align: right;
   width: 50%; }
 
+.move-to-left {
+  -webkit-transform: translateX(-400px);
+  transform: translateX(-400px);
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease; }
+
+.site-header {
+  height: 100vh; }
+
+.site-branding {
+  max-width: 1024px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0 auto; }
+  .site-branding .hamburger {
+    position: fixed;
+    z-index: 100;
+    -webkit-transition: all .7s ease;
+    transition: all .7s ease; }
+
+.hamburger:focus {
+  outline: 0; }
+
+.main-navigation {
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  right: 0;
+  background-color: #EF8354; }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -666,8 +702,12 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
-.site-branding {
-  height: 100vh; }
+#page {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease; }
 
 .site-content {
   max-width: 1024px;
@@ -685,19 +725,16 @@ article {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 150px 75px 75px; }
     article .post-containor .entry-title {
-      grid-area: title;
-      z-index: 10; }
+      grid-area: title; }
       article .post-containor .entry-title a {
         text-decoration: none;
         font-size: 2rem;
         color: #b9b9b9;
         text-align: left; }
     article .post-containor .entry-content {
-      grid-area: desc;
-      z-index: 10; }
+      grid-area: desc; }
     article .post-containor .entry-meta {
       grid-area: date;
-      z-index: 10;
       margin: 0 1rem; }
       article .post-containor .entry-meta .posted-on {
         color: white;
@@ -710,7 +747,8 @@ article {
       box-shadow: -5px 11px 40px -9px rgba(0, 0, 0, 0.65);
       position: relative;
       overflow: hidden;
-      margin: 0 1rem; }
+      margin: 0 1rem;
+      z-index: -1; }
       article .post-containor .thumbnail-wrapper img {
         position: absolute;
         -o-object-fit: cover;

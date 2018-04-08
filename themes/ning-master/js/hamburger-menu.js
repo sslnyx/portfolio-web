@@ -4,7 +4,10 @@
 
     function toggleSidebar() {
       $('.hamburger').toggleClass('is-active');
-      // $('main').toggleClass('move-to-left');
+      $('.hamburger,#page').toggleClass('move-to-left');
+      // $('.site-content').toggleClass('move-to-left');
+      // $('#site-navigation').toggleClass('hide');
+      
       // $('.sidebar-item').toggleClass('active');
     }
 

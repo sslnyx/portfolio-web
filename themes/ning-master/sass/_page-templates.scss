@@ -4,12 +4,17 @@
 
 /* Front page */
 
-// .post-containor{
-//   box-shadow: -13px 18px 40px -10px rgba(0, 0, 0, .35)
-// }
-.site-branding {
-  height: 100vh;
+#page{
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
 }
+
 
 .site-content {
   max-width: 1024px;
@@ -26,7 +31,7 @@ article {
     grid-template-rows: 150px 75px 75px;
     .entry-title {
       grid-area: title;
-      z-index: 10;
+      // z-index: 10;
       a {
         text-decoration: none;
         font-size: 2rem;
@@ -36,11 +41,9 @@ article {
     }
     .entry-content {
       grid-area: desc;
-      z-index: 10;
     }
     .entry-meta {
       grid-area: date;
-      z-index: 10;
       margin: 0 1rem;
       .posted-on {
         color: white;
@@ -55,6 +58,7 @@ article {
       position: relative;
       overflow: hidden;
       margin: 0 1rem;
+      z-index: -1;
       img {
         position: absolute;
         object-fit: cover;
