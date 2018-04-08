@@ -20,3 +20,19 @@ function ning_master_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'ning_master_body_classes' );
+
+function hero_style_front() {
+	if (! is_front_page() ) {
+			return;
+	}
+					$imagef = CFS()->get( 'hero_image' );
+					$banner_css = ".page-template-default .site-header{
+							background: 
+							linear-gradient(to bottom, rgba(255,255,255,0) 60%,rgba(255,255,255,1) 100%),
+							url({$imagef}) no-repeat center bottom;
+							background-size: cover, cover;
+							height: 100vh;
+						}";
+					wp_add_inline_style ('ning-master-style', $banner_css);
+	}
+add_action( 'wp_enqueue_scripts', 'hero_style_front');

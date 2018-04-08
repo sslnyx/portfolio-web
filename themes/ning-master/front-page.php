@@ -10,17 +10,21 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			
+		<?php			
+$args = array(
+   'order' => 'ASC',
+   'posts_per_page' => 30,
+   'post_type' => 'post',
+);
+$projects = new WP_Query( $args ); ?>
 
-		<?php if ( have_posts() ) : ?>
+<?php $projects = new WP_Query( $args ); /* $args set above*/ ?>
+<?php if ( $projects->have_posts() ) : ?>
 
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
-
+			
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( $projects->have_posts() ) : $projects->the_post(); ?>
+
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="post-containor" data-aos="fade-up">
