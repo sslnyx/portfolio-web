@@ -17,8 +17,13 @@
 	</head>
 
 	<body <?php body_class(); ?>>
+
 	
-				<div class="site-branding">				
+				<div class="site-branding">
+					<div class="my-name">
+					<h1>ning</h1>
+</div>
+						<div class="hamburger-containor">
 					<div class="hamburger hamburger--elastic" tabindex="0"
      				aria-label="Menu" role="button" aria-controls="navigation">
   					<div class="hamburger-box">
@@ -26,10 +31,9 @@
   					</div>
 					</div>
 				</div><!-- .site-branding -->
-
+</div>
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-	<!--navigation goes here-->
 	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 </nav>
 

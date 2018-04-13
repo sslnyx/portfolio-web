@@ -28,17 +28,18 @@ a {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
+	// float: left;
 	width: 100%;
 	ul {
-		display: none;
+		// display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		text-align: center;
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
+			// float: left;
+			// position: absolute;
 			top: $base__space-unit;
 			left: -999rem;
 			z-index: 99999;
@@ -66,8 +67,8 @@ a {
 		}
 	}
 	li {
-		float: left;
-		position: relative;
+		// float: left;
+		// position: relative;
 		&:hover>a,
 		&.focus>a {}
 	}
@@ -78,23 +79,29 @@ a {
 	.current_page_item>a,
 	.current-menu-item>a,
 	.current_page_ancestor>a {}
+	.page_item>a{
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		color: white;
+		margin: 30px 0;
+	}
 }
 
 /* Small menu. */
 
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
+// .menu-toggle,
+// .main-navigation.toggled ul {
+// 	display: block;
+// }
 
-@media screen and (min-width: 768px) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}
+// @media screen and (min-width: 768px) {
+	// .menu-toggle {
+	// 	display: none;
+	// }
+	// .main-navigation ul {
+	// 	display: block;
+	// }
+// }
 
 .comment-navigation,
 .posts-navigation,
@@ -132,19 +139,24 @@ a {
 }
 
 .site-branding {
-	max-width: 1024px; // text-align: right;
-	display: flex;
-	justify-content: flex-end;
+	max-width: 1240px; // text-align: right;
+	position: fixed;
+	z-index: 100;
+	right: 0;
+	left: 0;
 	margin: 0 auto;
-
-	.hamburger {
-		position: fixed;
-		z-index: 100;
-		-webkit-transition: all .7s ease;
-		-moz-transition: all .7s ease;
-		-ms-transition: all .7s ease;
-		-o-transition: all .7s ease;
-		transition: all .7s ease;
+	display: flex;
+	justify-content: space-between;
+	-webkit-transition: all .7s ease;
+	-moz-transition: all .7s ease;
+	-ms-transition: all .7s ease;
+	-o-transition: all .7s ease;
+	transition: all .7s ease;
+	.hamburger-containor {
+		align-self: center;		
+	}
+	h1{
+		text-transform: uppercase;
 	}
 }
 
@@ -160,4 +172,6 @@ a {
 	z-index: 1;
 	right: 0;
 	background-color: #FDD5A2;
+	padding: 3rem; // ul{
+	// }
 }

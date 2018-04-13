@@ -4,7 +4,7 @@
 
     function toggleSidebar() {
       $('.hamburger').toggleClass('is-active');
-      $('.hamburger,#page').toggleClass('move-to-left');
+      $('#page, .site-branding').toggleClass('move-to-left');
       // $('.sidebar-item').toggleClass('active');
     }
 
