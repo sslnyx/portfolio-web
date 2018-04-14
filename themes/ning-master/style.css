@@ -456,7 +456,7 @@ a {
   .main-navigation a {
     display: block;
     text-decoration: none; }
-  .main-navigation .page_item > a {
+  .main-navigation .menu-item > a {
     font-size: 1.5rem;
     text-transform: uppercase;
     color: white;
@@ -778,6 +778,9 @@ article:nth-child(3n+3) .post-containor {
     margin: 0; }
     article:nth-child(3n+3) .post-containor .entry-meta .posted-on {
       color: darkgrey; }
+
+.site-info {
+  height: 1rem; }
 
 /*!
  * Hamburgers
