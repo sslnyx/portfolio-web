@@ -4,7 +4,7 @@
 
 /* Front page */
 
-#page{
+#page {
   position: relative;
   z-index: 2;
   background-color: white;
@@ -13,12 +13,10 @@
   -ms-transition: all .7s ease;
   -o-transition: all .7s ease;
   transition: all .7s ease;
-  -webkit-box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.25);
-  -moz-box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.25);
-  box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.25);
 }
-
-
 
 .site-content {
   max-width: 1024px;
@@ -33,7 +31,11 @@ article {
     align-content: center;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 150px 75px 75px;
+    h2 {
+      margin: 0;
+    }
     .entry-title {
+      writing-mode: vertical-lr;
       grid-area: title;
       a {
         text-decoration: none;
@@ -43,13 +45,14 @@ article {
       }
     }
     .entry-content {
+      display: none;
       grid-area: desc;
     }
     .entry-meta {
       grid-area: date;
       margin: 0 1rem;
       .posted-on {
-        color: white;
+        color: darkgrey;
         writing-mode: vertical-lr;
         text-shadow: 0px 0px 2px rgba(150, 150, 150, 1);
       }
@@ -67,8 +70,7 @@ article {
         object-fit: cover;
         height: 100%;
       }
-    }
-    // .thumbnail-wrapper:after {
+    } // .thumbnail-wrapper:after {
     //   background: rgba(0, 0, 0, .35);
     //   content: " ";
     //   height: 100%;
@@ -80,9 +82,9 @@ article {
 
 article:nth-child(3n+1) {
   .post-containor {
-    grid-template-areas: "... ... title title" "... ... desc desc" "date ... link link";
+    grid-template-areas: "... ... ... title" "... ... ... title" "date ... ... title";
     .thumbnail-wrapper {
-      grid-column: 1 / 3;
+      grid-column: 1 / 4;
       grid-row: 1 / 4;
     }
   }
@@ -90,35 +92,90 @@ article:nth-child(3n+1) {
 
 article:nth-child(3n+2) {
   .post-containor {
-    grid-template-areas: "title title ... ..." "... desc ... date" "... ... ... date";
+    grid-template-areas: "title ... ... ..." "title desc ... date" "title ... ... date";
     .thumbnail-wrapper {
-      grid-column: 3 / 5;
+      grid-column: 2 / 5;
       grid-row: 1 / 4;
     }
+    .entry-content{
+      margin: 0;
+      p{
+        margin: 0;
+      }
+    }    
     .entry-meta,
-    .entry-content,
     .entry-title {
       justify-self: end;
+      align-self: end;
+      transform: rotate(180deg);
     }
   }
 }
 
 article:nth-child(3n+3) {
   .post-containor {
-    grid-template-areas: "... ... ... title" "... ... desc desc" "... ... ... date";
+    grid-template-areas: "... ... ... ..." "... ... ... date" "title title title title";
     .thumbnail-wrapper {
-      grid-column: 2 / 4;
-      grid-row: 1 / 4;
+      grid-column: 1 / 5;
+      grid-row: 1 / 3;
     }
     .entry-meta {
       margin: 0;
-      .posted-on{
-        color: darkgrey;
-      }
+    }
+    .entry-title {
+      text-align: center;
+      writing-mode: horizontal-tb;
     }
   }
 }
 
-.site-info{
+.site-info {
   height: 1rem;
+}
+
+@media screen and (min-width: 480px) {
+  article {
+    .post-containor {
+      .entry-title {
+        writing-mode: horizontal-tb;
+      }
+      .entry-content {
+        display: block;
+      }
+    }
+  }
+  article:nth-child(3n+1) {
+    .post-containor {
+      grid-template-areas: "... ... title title" "... ... desc desc" "date ... link link";
+      .thumbnail-wrapper {
+        grid-column: 1 / 3;
+        grid-row: 1 / 4;
+      }
+    }
+
+  }
+
+  article:nth-child(3n+2) {
+    .post-containor {
+      grid-template-areas: "title title ... ..." "... desc ... date" "... desc ... date";
+      .thumbnail-wrapper {
+        grid-column: 3 / 5;
+        grid-row: 1 / 4;
+      }
+      .entry-meta,
+      .entry-title {
+        align-self: start;
+        transform: rotate(0deg);
+      }
+    }
+  }
+  article:nth-child(3n+3) {
+    .post-containor {
+      grid-template-areas: "... ... ... title" "... ... desc desc" "... ... ... date";
+      .thumbnail-wrapper {
+        grid-column: 2 / 4;
+        grid-row: 1 / 4;
+      }
+    }
+  }
 }
