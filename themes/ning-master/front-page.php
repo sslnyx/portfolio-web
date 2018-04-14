@@ -32,9 +32,13 @@ $projects = new WP_Query( $args ); ?>
 		<div class="thumbnail-wrapper">
 			<?php the_post_thumbnail( 'large' ); ?>
 			</div>
-		<?php endif; ?>
+		<?php endif; 
+		
+		$link = CFS()->get( 'site_link' );
+		?>
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+
+		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( $link['url']  ) ), '</a></h2>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">

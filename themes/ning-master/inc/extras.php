@@ -31,7 +31,6 @@ function hero_style_front() {
 							linear-gradient(to bottom, rgba(255,255,255,0) 60%,rgba(255,255,255,1) 100%),
 							url({$imagef}) no-repeat center bottom;
 							background-size: cover, cover;
-							height: 100vh;
 						}";
 					wp_add_inline_style ('ning-master-style', $banner_css);
 	}

@@ -25,24 +25,30 @@
 </div>
 						<div class="hamburger-containor visible-xs">
 					<div class="hamburger hamburger--elastic" tabindex="0"
-     				aria-label="Menu" role="button" aria-controls="navigation">
+						 aria-label="Menu" role="button" aria-controls="navigation">
+						 
   					<div class="hamburger-box">
     					<div class="hamburger-inner"></div>
-  					</div>
+						</div>
 					</div>
-				</div><!-- .site-branding -->
+				</div>
+
+</div><!-- .site-branding -->
+
+<div class="hamburger-containor hidden-xs">
+					<div class="hamburger hamburger--elastic" tabindex="0"
+						 aria-label="Menu" role="button" aria-controls="navigation">
+						 
+  					<div class="hamburger-box">
+    					<div class="hamburger-inner"></div>
+						</div>
+					</div>
 </div>
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 
-	<div class="hamburger-containor hidden-xs">
-					<div class="hamburger hamburger--elastic" tabindex="0"
-     				aria-label="Menu" role="button" aria-controls="navigation">
-  					<div class="hamburger-box">
-    					<div class="hamburger-inner"></div>
-  					</div>
-					</div>
+
 </nav>
 
 		<div id="page" class="hfeed site">

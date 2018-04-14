@@ -133,7 +133,15 @@ article:nth-child(3n+3) {
   height: 1rem;
 }
 
+.page-template-default .site-header{
+  height: 70vh;
+}
+
 @media screen and (min-width: 480px) {
+  .page-template-default .site-header{
+    height: 100vh;
+  }
+
   article {
     .post-containor {
       .entry-title {
@@ -176,6 +184,10 @@ article:nth-child(3n+3) {
         grid-column: 2 / 4;
         grid-row: 1 / 4;
       }
+      .entry-title {
+        text-align: left;
     }
   }
+  }
+
 }

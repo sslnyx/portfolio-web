@@ -156,6 +156,7 @@ a {
 		align-self: center;		
 	}
 	h1{
+		margin: 1.2rem 1rem;
 		text-transform: uppercase;
 	}
 }
@@ -174,4 +175,27 @@ a {
 	background-color: #FDD5A2;
 	padding: 3rem; // ul{
 	// }
+}
+
+
+
+.hidden-xs {
+	display: block;
+	position: fixed;
+	z-index: 100;
+	right: 0;
+	margin: 1rem 0;
+}
+.visible-xs {
+	display: none;
+}
+
+@media screen and (min-width: 480px) {
+
+	.hidden-xs {
+		display: none;
+	}
+	.visible-xs {
+		display: block;
+	}
 }

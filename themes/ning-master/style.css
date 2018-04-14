@@ -225,6 +225,13 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Raleway';
+  src: url("../../fonts/Raleway-Light.eot");
+  src: url("../../fonts/Raleway-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/Raleway-Light.woff2") format("woff2"), url("../../fonts/Raleway-Light.ttf") format("truetype"), url("../../fonts/Raleway-Light.svg#Raleway-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -234,7 +241,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -510,6 +517,7 @@ a {
     -ms-flex-item-align: center;
         align-self: center; }
   .site-branding h1 {
+    margin: 1.2rem 1rem;
     text-transform: uppercase; }
 
 .hamburger:focus {
@@ -524,6 +532,22 @@ a {
   right: 0;
   background-color: #FDD5A2;
   padding: 3rem; }
+
+.hidden-xs {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  margin: 1rem 0; }
+
+.visible-xs {
+  display: none; }
+
+@media screen and (min-width: 480px) {
+  .hidden-xs {
+    display: none; }
+  .visible-xs {
+    display: block; } }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -798,7 +822,12 @@ article:nth-child(3n+3) .post-containor {
 .site-info {
   height: 1rem; }
 
+.page-template-default .site-header {
+  height: 70vh; }
+
 @media screen and (min-width: 480px) {
+  .page-template-default .site-header {
+    height: 100vh; }
   article .post-containor .entry-title {
     -webkit-writing-mode: horizontal-tb;
         -ms-writing-mode: lr-tb;
@@ -825,7 +854,9 @@ article:nth-child(3n+3) .post-containor {
     grid-template-areas: "... ... ... title" "... ... desc desc" "... ... ... date"; }
     article:nth-child(3n+3) .post-containor .thumbnail-wrapper {
       grid-column: 2 / 4;
-      grid-row: 1 / 4; } }
+      grid-row: 1 / 4; }
+    article:nth-child(3n+3) .post-containor .entry-title {
+      text-align: left; } }
 
 /*!
  * Hamburgers
