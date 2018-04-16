@@ -21,7 +21,7 @@
 	
 				<div class="site-branding">
 					<div class="my-name">
-					<h1>ning</h1>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><h1>ning</h1></a>
 </div>
 						<div class="hamburger-containor visible-xs">
 					<div class="hamburger hamburger--elastic" tabindex="0"

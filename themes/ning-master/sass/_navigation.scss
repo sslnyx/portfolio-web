@@ -5,6 +5,7 @@
 /* Links */
 
 a {
+	text-decoration: none;	
 	color: $color__link;
 	&:visited {
 		color: $color__link-visited;
@@ -135,7 +136,7 @@ a {
 }
 
 .site-header {
-	height: 100vh;
+	height: 90px;
 }
 
 .site-branding {
